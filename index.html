@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Product Website</title>
+    <style>
+        #hero{
+            display: flex;
+            justify-content: space-evenly;
+            color: navy;
+            margin-left:20px ;
+            margin-right: 20px;
+            border-radius: 10px;
+            height: 300px;
+            font-family: 'Teko', sans-serif;
+            font-size: 2rem;
+            transition: 2s width;
+        }
+        #hero:hover{
+            
+            color: #EEEEEE;
+            background-color: #0F4C75;
+            text-shadow: 5px 5px 5px black;
+        }
+        #hero img{
+            border-radius: 10px;
+            margin: 25px; 
+        }
+        #hero img:hover{
+            
+            box-shadow: 5px 5px 5px black;
+        }
+        #pricing{
+            font-size: 2rem;
+        }
+        
+        #info{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows:1fr 2fr 2fr 2fr ;
+            margin-left: 25px;
+            margin-right: 25px;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #info .strike{
+            text-decoration: line-through;
+            font-size: 1.5rem;
+        }
+        .scroll-text{
+            
+            background-color:#0F4C75;
+            padding: 7px auto;
+            margin: auto 20px;
+            border-radius:10px ;
+            
+        }
+        .highlights{
+            text-shadow: 2px 2px 2px black;
+            color: #EEEEEE;
+            animation: animate 10s linear infinite ;
+        }
+        @keyframes animate{
+            0%{
+                transform: translate(-100%,0);
+            }
+            100%{
+                transform: translate(100%,0);
+            }
+        }
+        .review-box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+        }
+        #reviews{
+            background-color: #0F4C75;
+            border-radius: 10px;
+            margin: auto 25px;
+
+        }
+        .review{
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            background-color: #EEEEEE;
+            color: black;
+        }
+        .review div{
+            padding: 10px;
+        }
+        .name{
+            font-size: 1.4rem;
+            font-family: 'Mukta', sans-serif;
+            color: black;
+        }
+        .revtext{
+            font-size: 1.2rem;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+        #calltoaction{
+            text-align: center;
+            margin:20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #calltoaction button{
+            background-color: #0F4C75;
+            border-radius: 5px;
+            color: #EEEEEE;
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #gallery{
+            display: grid;
+            grid-template-columns: 1fr,1fr,1fr;
+            grid-template-rows: 0.8fr 2fr 2fr;
+            gap: 7px;
+            margin: auto 20px;
+            background-color: #0F4C75;
+            border-radius: 10px;
+            color: #EEEEEE;
+        }
+        #gallery h2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        #gallery img{
+            width: 300px;
+            height: 300px;
+            margin-left: 20px;
+            transition: 1s height,1s width;
+        }
+        #gallery div{
+            text-align: center;
+        }
+        
+        #gallery img:hover{
+            height: 500px;
+            width: 500px;
+            cursor: pointer;
+        }
+        .desc{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .care{
+            color: #EEEEEE;
+            font-family: 'Teko', sans-serif;
+
+            grid-row-start: 2;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .care h2{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .sizes{
+            grid-row-start: 3;
+            grid-column-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .sizes div{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .sizes button{
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            font-weight: 700;
+            
+        }
+        .sizes button:hover{
+            background-color: lightblue;
+            color: white;
+        }
+        .colors{
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .desc,.pricebox,.care,.colors,.sizes{
+            background-color: #0F4C75;
+            border-radius: 10px;
+
+        }
+        form label{
+            padding: 10px 20px;
+            font-size: xx-large;
+        }
+        form{
+            text-align: center;
+        }
+        select{
+            background-color: navajowhite;
+            width: 200px;
+            height: 125px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: xx-large;
+            font-family: 'Teko', sans-serif;
+        }
+        .care{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .care li{
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="hero">
+        <h1 style="margin-top: 120px; ">VERSACE COTTON SHIRT</h1>
+        <div><img class="hero-img" src="./images/heroimg.avif" height="250px" width="250px"/>
+        </div>
+    </div>
+    <div class="scroll-text">
+        <p class="highlights">Republic Day sale flat 20% off</p>
+        </div>
+    <div id="info">
+        
+        
+        <div class="pricebox">
+        <p id="pricing" style="color: #EEEEEE; font-family: 'Teko', sans-serif; text-align: center;">PRICE:  <span class="strike">Rs.89000</span>Rs.71200</p>
+        </div>
+        <div class="desc" style="font-family: 'Teko', sans-serif;">
+            <h2 align="center" style="color: white;font-family: 'Teko', sans-serif;">Product Description</h2>
+            <p style="color: white; padding-left: 10px;">This long-sleeved shirt is made from compact cotton poplin with dropped shoulders. A chest pocket and tailoring label complete the button-down style.</p>
+            <ul style="background-color: white; color: navy; border-radius: 10px; font-weight: 300;line-height: 35px; width: 90%;margin-left: 30px;">
+                <li>Gold and Metallic Accents</li>
+                <li>Meticulous Attention to Detail</li>
+                <li>Exclusive Limited Edition</li>
+                <li>Impeccable Tailoring and Fit</li>
+                <li>Luxurious Fabrics Used</li>
+            </ul>
+        </div>
+        
+            
+        <div class="sizes">
+            <h2 style="color: #EEEEEE; font-family: 'Teko', sans-serif; text-align: center;">SIZES AVAILABLE</h2>
+            <div>
+            <button>XS</button>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <button>XXL</button>
+            </div>
+            <p style="color: #EEEEEE;font-family: 'Teko', sans-serif;font-size: 1.3rem; text-align: center;">Refer to standard size chart for further clarification</p>
+        </div>
+        <div class="colors" style="padding-bottom: 40px;">
+            <form>
+                <label for="colours" style="color: #EEEEEE;font-family: 'Teko', sans-serif;text-align: center;">Choose a color:</label>
+                <br>
+                <select id="colours" name="colours">
+                    <option style="color: sandybrown;">Beige</option>
+                    <option style="color: red;">Red</option>
+                    <option style="color: black;">Black</option>
+                    <option style="color: violet;">Violet</option>
+                    <option style="color: green;">Green</option>
+                </select>
+            </form>
+        </div>
+        
+        <div class="care">
+            <div>
+            <h2>Material Composition</h2>
+                <ul>
+                    <li>60% Cotton</li>
+                    <li>40% Polyester</li>
+                    <li>Pima Cotton</li>
+                    <li>Organic Cotton</li>
+                    
+                </ul>
+            </div>
+            <div>
+            <h2>Care Tips</h2>
+            <ul>
+                <li>Machine Wash</li>
+                <li>Fit Type: Regular Fit</li>
+                <li>Store Properly</li>
+                <li>Air Dry or Low Heat</li>
+                <li>Iron with Care</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div id="gallery">
+        <h2 style="font-family: 'Teko', sans-serif;padding-left: 50px;font-size: 2rem;">A look at the product from various angles</h2>
+        <div><img src="./images/look1.avif"  /></div>
+        <div ><img src="./images/look2.avif"  /></div>
+        <div><img src="./images/look3.avif"  /></div>
+        <div><img src="./images/look4.avif"  /></div>
+        <div><img src="./images/look5.avif"  /></div>
+        <div><img src="./images/heroimg.avif"  /></div>
+
+    </div>
+    <div id="reviews">
+        <h2 style="text-align: center;color: #EEEEEE; margin-top: 20px;font-family: 'Teko', sans-serif;">Customer Reviews</h2>
+        <div class="review-box">
+        <div class="review"><div><p class="name">Alexa</p><p class="revtext">⭐️⭐️⭐️⭐️⭐️ Excellent Quality!<br>I recently purchased the Versace cotton shirt, and I am absolutely thrilled with the quality. The fabric is soft and breathable, making it perfect for both casual and semi-formal occasions. The attention to detail in the design is unmistakable. Versace never disappoints!</p></div></div>
+        <div class="review"><div><p class="name">Alan</p><p class="revtext">⭐️⭐️⭐️⭐️ Stylish and Comfortable<br>This shirt is a perfect blend of style and comfort. The fit is just right, and the cotton fabric feels luxurious against the skin. The iconic Versace logo adds a touch of sophistication. It's become my go-to shirt for evenings out or even a day at the office.</p></div></div>
+        <div class="review"><div><p class="name">Mike</p><p class="revtext">⭐️⭐️⭐️⭐️⭐️ Worth Every Penny!<br>I hesitated a bit due to the price, but this Versace cotton shirt is worth every penny. The craftsmanship is top-notch, and the shirt exudes elegance. The fabric holds up well after multiple washes, maintaining its shape and color. I feel like I'm wearing a piece of art!</p></div></div>   
+        <div class="review"><div><p class="name">Lana</p><p class="revtext">⭐️⭐️⭐️ Versatile Wardrobe Staple<br>Versace has created a versatile wardrobe staple with this cotton shirt. The classic design allows for various styling options, whether you pair it with jeans or dress it up with trousers. It's become a staple in my wardrobe, and I appreciate the timeless appeal.</p></div></div>
+        </div>
+    </div>
+    <div id="calltoaction">
+        <button >Add to cart<i class="fa fa-shopping-cart" style="padding-left: 5px;"></i></button>
+        <button>Buy Now</button>
+    </div>
+</body>
+</html>
